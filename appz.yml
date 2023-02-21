@@ -1,0 +1,22 @@
+app:
+  code: CRM
+  name: crm
+  notify: fjoy@ecloudcontrol.com
+  
+build:
+  build_file: pom.xml
+  args:
+    PROJECT: /appz/project/CRM
+  env: DEV
+  image_template: springboot-v2
+  output_files: output/*.zip
+  version: 0.4
+  
+deploy:
+  context: francisjoy/DEV
+  port: 8080
+  replicas: 1
+  
+properties:
+
+  nano: 1
